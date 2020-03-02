@@ -1,0 +1,169 @@
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+
+using namespace std;
+
+class Fecha
+{
+private:
+    int dia;
+    int mes;
+    int cuatro;
+    int dia1;
+    int mes2;
+
+public:
+    Fecha(int, int , int, int, int );
+    void mostrarFecha();
+    void meses();
+    void actualizar();
+
+};
+
+
+Fecha::Fecha(int dd, int mm, int aaaa, int dias, int mess)
+{
+    dia=dd;
+    mes=mm;
+    cuatro=aaaa;
+    dia1=dias;
+    mes2= mess;
+
+
+
+}
+
+void Fecha::mostrarFecha()
+{
+
+    cout<<"la fecha es ="<<dia<<"/"<<mes<<"/"<<cuatro<< endl;
+
+}
+
+void Fecha::meses()
+{
+
+
+
+     if((dia>=1&&dia<=31 && mes==1))
+
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"enero/"<<cuatro<<endl;
+
+
+    }
+    else if(dia>=1&&dia<=28 && mes==2)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"febrero/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=31 && mes==3)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"marzo/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=30 && mes==4)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"abril/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=31 && mes==5)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"mayo/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=30 && mes==6)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"junio/"<<cuatro<<endl;
+
+    }
+    else if((dia>=1&&dia<=31 && mes==7))
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"julio/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=31 && mes==8)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"agosto/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=30 && mes==9)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"septiembre/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=31 && mes==10)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"octubre/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=30 && mes==11)
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"noviembre/"<<cuatro<<endl;
+
+    }
+    else if(dia>=1&&dia<=31 && mes==12)
+
+    {
+        cout<<"la fecha en la que estas es:"<<dia<<"/"<<mes<<"diciembre/"<<cuatro<<endl;
+    }
+
+
+}
+
+
+void Fecha::actualizar()
+{
+    int cont,fech,rest;
+    cout<< "ingresa el dia que quieras"<<endl;
+    cin>> dia1;
+    cout<< "ingresa el mes que quieras"<<endl;
+    cin>> mes2;
+
+        cont=abs(dia+dia1);
+        fech=abs(mes+mes2);
+        rest=abs(dia-cont);
+        cout<<"la fecha actual es:"<<cont<<"/"<<fech<<"/"<< cuatro<<endl;
+        cout<<"los dias transcurridos son:"<<rest<<endl;
+
+
+
+
+
+
+
+}
+
+int main()
+{
+
+    int dia;
+    int mes;
+    int cuatro;
+    int dia1;
+    int mes2;
+
+
+
+    cout<< "ingresa el dia que quieras"<<endl;
+    cin>> dia;
+    cout<< "ingresa el mes que quieras"<<endl;
+    cin>> mes;
+    cout<< "ingresa el año que quieras"<<endl;
+    cin>> cuatro;
+
+
+    Fecha miFecha= Fecha(dia,mes,cuatro,dia1,mes2);
+    miFecha.mostrarFecha();
+
+    Fecha Mimes= Fecha(dia,mes,cuatro,dia1,mes2);
+    Mimes.meses();
+
+    Fecha Miactualizacion= Fecha(dia,mes,cuatro,dia1,mes2);
+    Miactualizacion.actualizar();
+
+
+    return 0;
+
+}
